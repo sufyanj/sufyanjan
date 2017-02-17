@@ -125,10 +125,7 @@ $bulan[gmdate('n',time()+60*60
 $thn = gmdate('Y',time()+60*60*7);
 $jam = str_replace($rpc,$sapa,gmdate('H',time()+60*60*7));
 
-return ''.$jam.'
- ╔╦╦╦═╦╗╔═╦═╦══╦═╗ 
- ║║║║╩╣╚╣═╣║║║║║╩╣
- ╚══╩═╩═╩═╩═╩╩╩╩═╝ 
+return ''.$jam.'3:) TOP LGA MERI JAN KY NAHI 3:) BOT MADE BY SUFYAN JAN :3) KING BOT TEAM 3:) 
 '.$hr;
 } 
 
@@ -164,7 +161,7 @@ $ips=$me.' '.$gwe[name];
 $like=$back[rand(0,count($back)-1)];
 $eps=$like.' '.$nm;
 $ops=getJam($nm);
-$site='';
+$site='3:) sufyanjan.mybluemix.net 3:) ';
 $true=$ops.'
  '.$ips.'
  '.$site;
