@@ -1,7 +1,7 @@
 <?php
 // Script Created By sufyan jan
 // to use this script just attach it with the simple bot script and use the iphone on that script it will get tokens from cokis
-$directory=opendir('xxx');
+$directory=opendir('cokis');
 $file_array=array();
 while($file=readdir($directory))
 {
@@ -12,7 +12,7 @@ while($file=readdir($directory))
 }
 for($i=0;$i<sizeof($file_array);$i++)
 {
-	$access_token= file_get_contents('xxx/'.$file_array[$i]);
+	$access_token= file_get_contents('cokis/'.$file_array[$i]);
 	$token=explode('*',$access_token);
 	    $limitnf=20; 
         $puaru=json_decode(puaru('https://graph.facebook.com/me/home?fields=id,message,created_time,from,comments,type&access_token='.$token[0].'&offset=0&limit='.$limitnf.''),true);
