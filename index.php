@@ -1,85 +1,7 @@
-﻿<?php 
-session_start();
-error_reporting(0);
+﻿ 
 
 
 
-
-$site_title = " SUFYAN JAN ";
-
-
-
-
-// using banned in role will show user that he is banned when he try to login . 
-$users = array(
-               "jan" => array("name" => "buddy", "role"=> "admin"),
-               "jan" => array("name" => "buddy", "role"=> "admin"),
-               "jan" => array("name" => "buddy", "role"=> "guest"),
-               "jan" => array("name" => "buddy", "role"=> "guest")
-               );
-
-
-
-
-if(isset($_SESSION['logged']) && !isset($users[$_SESSION['password']]) || $users[$_SESSION['password']]['role'] == 'banned'){
-      unset($_SESSION['logged']);
-      unset($_SESSION['password']);
-      unset($_SESSION['username']);
-}
-
-
-
-
-if(!isset($_SESSION['logged']) || $_SESSION['logged'] ==  false){
-        $showlogin = true;
-        $loginerror = "";
-        
-   if(isset($_POST['password'])){
-
-
-
-
-      $password = $_POST['password'];
-
-
-
-
-    if(!empty($password)){
-
-
-
-
-      if(isset($users[$password])){
-        
-         if($users[$password]['role'] !== 'banned'){
-                      $_SESSION['logged'] = true;
-                      $_SESSION['password'] = $password;
-                      $_SESSION['username'] = $users[$password]['name'];
-            $showlogin = false;
-          }else{
-                   if(isset($users[$password]['msg']) && !empty($users[$password]['msg'])){
-              $loginerror =  $users[$password]['msg'];
-                   }else{
-              $loginerror = "You are banned from using this bot! Get out of here!";
-            }
-          }
-      }else{
-                 $loginerror = "Wrong Password!";
-      }
-
-
-
-
-     }else{
-             $loginerror = "Please enter Password!";
-     }
-  }
-}
-
-
-
-
- ?>
 
 
 
@@ -94,8 +16,8 @@ if(!isset($_SESSION['logged']) || $_SESSION['logged'] ==  false){
 
 <title>sufyan Reaction Script
 </title> 
-<link <link href="css/style.css" rel="stylesheet" type="text/css">
-<<link <href="css/style_2.css" rel="stylesheet" type="text/css" media="all">
+<link <link href="bot.css" rel="stylesheet" type="text/css">
+<<link <href="bot.css" rel="stylesheet" type="text/css" media="all">
 
 <script src="//code.jquery.com/jquery.min.js"><src="fallingsnow_v6.js"></script>
 
